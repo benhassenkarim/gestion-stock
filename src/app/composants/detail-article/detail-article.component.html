@@ -1,5 +1,6 @@
 <div class="row mb-1 mr-0 custom-border">
   <div class="col-md-1 custom-border-right p-1 text-center mb-1 mt-1 ">
+  <img src="assets/product.png" width="90px" height="90px">
    <!-- <img [src]="articleDto.photo ? articleDto.photo : 'assets/product.png'" width="100px" height="100px">-->
   </div>
 
@@ -8,33 +9,34 @@
     <div class="col">
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.codeArticle }}--></div>
+        <div class="col-md-11"><!--{{ articleDto.codeArticle }}--> codeArticcle</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.designation }}--></div>
+        <div class="col-md-11"><!--{{ articleDto.designation }}--> designation</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-dollar-sign blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.prixUnitaireHt }}--> €</div>
+        <div class="col-md-11"><!--{{ articleDto.prixUnitaireHt }}-->prixHT €</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-dollar-sign blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.prixUnitaireTtc }}--> €</div>
+        <div class="col-md-11"><!--{{ articleDto.prixUnitaireTtc }}--> prixTTC€</div>
       </div>
     </div>
   </div>
 
   <!--  details categorie-->
   <div class="col-md-3 custom-border-right mb-1 mt-1 ">
-    <div class="row">
-      <div class="col-md-2">
-        <i class="fas fa-flag-checkered blue-color"></i>
+    <div class="row ">
+      <div class="col-md-2  "><br>
+        <i class="fas fa-flag-checkered blue-color "></i>
+
       </div>
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-12"><!--{{ articleDto.category?.code }}--></div>
-          <div class="col-md-12"><!--{{ articleDto.category?.designation }}--></div>
+          <div class="col-md-12"><!--{{ articleDto.category?.code }}--> code</div>
+          <div class="col-md-12"><!--{{ articleDto.category?.designation }}--> designation</div>
         </div>
       </div>
     </div>
