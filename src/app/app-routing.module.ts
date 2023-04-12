@@ -7,6 +7,9 @@ import {PageStatistiqueComponent} from "./pages/page-statistique/page-statistiqu
 import {PageArticleComponent} from "./pages/articles/page-article/page-article.component";
 import {NouvelArticleComponent} from "./pages/articles/nouvel-article/nouvel-article.component";
 import {PageMvtstkComponent} from "./pages/mvtstk/page-mvtstk/page-mvtstk.component";
+import {PageClientComponent} from "./pages/client/page-client/page-client.component";
+import {PageFournisseurComponent} from "./pages/fournisseur/page-fournisseur/page-fournisseur.component";
+import {NouveauClientFournisseurComponent} from "./composants/nouveau-client-fournisseur/nouveau-client-fournisseur.component";
 
 const routes: Routes = [
   {path:'login',component:PageLoginComponent},
@@ -16,8 +19,11 @@ const routes: Routes = [
       {path:'statistiques',component:PageStatistiqueComponent},
       {path:'articles',component:PageArticleComponent},
       {path:'nouvelarticles',component:NouvelArticleComponent},
-      {path:'mvtstk',component:PageMvtstkComponent}
-
+      {path:'mvtstk',component:PageMvtstkComponent},
+      {path:'clients',component:PageClientComponent},
+      {path:'nouveauclient',component:NouveauClientFournisseurComponent},
+      {path:'fournisseurs',component:PageFournisseurComponent},
+      {path:'nouveaufournisseur',component:NouveauClientFournisseurComponent},
       ]},
 ];
 

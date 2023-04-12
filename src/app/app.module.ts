@@ -17,6 +17,12 @@ import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-a
 import { PageMvtstkComponent } from './pages/mvtstk/page-mvtstk/page-mvtstk.component';
 import { DetailArticleMvtstkComponent } from './composants/detail-article-mvtstk/detail-article-mvtstk.component';
 import { DetailMvtstkComponent } from './composants/detail-mvtstk/detail-mvtstk.component';
+import { DetailClientFournisseurComponent } from './composants/detail-client-fournisseur/detail-client-fournisseur.component';
+import { PageClientComponent } from './pages/client/page-client/page-client.component';
+import { PageFournisseurComponent } from './pages/fournisseur/page-fournisseur/page-fournisseur.component';
+import { NouveauClientFournisseurComponent } from './composants/nouveau-client-fournisseur/nouveau-client-fournisseur.component';
+import { DetailCmdCltFrsComponent } from './composants/detail-cmd-clt-frs/detail-cmd-clt-frs.component';
+import { DetailCmdComponent } from './composants/detail-cmd/detail-cmd.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,13 @@ import { DetailMvtstkComponent } from './composants/detail-mvtstk/detail-mvtstk.
     NouvelArticleComponent,
     PageMvtstkComponent,
     DetailArticleMvtstkComponent,
-    DetailMvtstkComponent
+    DetailMvtstkComponent,
+    DetailClientFournisseurComponent,
+    PageClientComponent,
+    PageFournisseurComponent,
+    NouveauClientFournisseurComponent,
+    DetailCmdCltFrsComponent,
+    DetailCmdComponent
   ],
   imports: [
     BrowserModule,
