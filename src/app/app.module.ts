@@ -23,6 +23,9 @@ import { PageFournisseurComponent } from './pages/fournisseur/page-fournisseur/p
 import { NouveauClientFournisseurComponent } from './composants/nouveau-client-fournisseur/nouveau-client-fournisseur.component';
 import { DetailCmdCltFrsComponent } from './composants/detail-cmd-clt-frs/detail-cmd-clt-frs.component';
 import { DetailCmdComponent } from './composants/detail-cmd/detail-cmd.component';
+import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-frs.component';
+import { NouveauCmdCltFrsComponent } from './composants/nouveau-cmd-clt-frs/nouveau-cmd-clt-frs.component';
+import { PageCategorieComponent } from './pages/categorie/page-categorie/page-categorie.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { DetailCmdComponent } from './composants/detail-cmd/detail-cmd.component
     PageFournisseurComponent,
     NouveauClientFournisseurComponent,
     DetailCmdCltFrsComponent,
-    DetailCmdComponent
+    DetailCmdComponent,
+    PageCmdCltFrsComponent,
+    NouveauCmdCltFrsComponent,
+    PageCategorieComponent
   ],
   imports: [
     BrowserModule,
