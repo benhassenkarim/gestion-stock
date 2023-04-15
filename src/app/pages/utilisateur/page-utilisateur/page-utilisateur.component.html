@@ -1,0 +1,39 @@
+
+<div class="col">
+  <div class="row m-2">
+    <div class="col-md-8 p-0">
+      <h4>Liste des Utilisateurs</h4>
+    </div>
+    <div class="col-md-4 text-right">
+
+      <app-boutton-action
+        (clickEvent)="nouvelUtilisateur()"
+      ></app-boutton-action>
+    </div>
+    <!-- <div class="alert alert-danger" *ngIf="errorMsg">
+       {{ errorMsg }}
+     </div>-->
+  </div>
+  <div class="col m-3">
+    <!-- <app-detail-article
+       *ngFor="let article of listArticle"
+       [articleDto]="article"
+       (suppressionResult)="handleSuppression($event)"
+     >
+     </app-detail-article>-->
+    <app-detail-utilisateur></app-detail-utilisateur>
+    <app-detail-utilisateur></app-detail-utilisateur>
+    <app-detail-utilisateur></app-detail-utilisateur>
+    <app-detail-utilisateur></app-detail-utilisateur>
+    <app-detail-utilisateur></app-detail-utilisateur>
+
+  </div>
+  <div class="row mb-3">
+    <!--*ngIf="listArticle.length"-->
+    <div class=" col-md-12 text-center">
+
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+
+</div>

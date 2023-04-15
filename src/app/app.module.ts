@@ -26,6 +26,12 @@ import { DetailCmdComponent } from './composants/detail-cmd/detail-cmd.component
 import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-frs.component';
 import { NouveauCmdCltFrsComponent } from './composants/nouveau-cmd-clt-frs/nouveau-cmd-clt-frs.component';
 import { PageCategorieComponent } from './pages/categorie/page-categorie/page-categorie.component';
+import { NouvelCategorieComponent } from './pages/categorie/nouvel-categorie/nouvel-categorie.component';
+import { PageUtilisateurComponent } from './pages/utilisateur/page-utilisateur/page-utilisateur.component';
+import { DetailUtilisateurComponent } from './composants/detail-utilisateur/detail-utilisateur.component';
+import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component';
+import { PageProfileComponent } from './pages/profil/page-profile/page-profile.component';
+import { ChangePassComponent } from './pages/profil/change-pass/change-pass.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +58,13 @@ import { PageCategorieComponent } from './pages/categorie/page-categorie/page-ca
     DetailCmdComponent,
     PageCmdCltFrsComponent,
     NouveauCmdCltFrsComponent,
-    PageCategorieComponent
+    PageCategorieComponent,
+    NouvelCategorieComponent,
+    PageUtilisateurComponent,
+    DetailUtilisateurComponent,
+    NouvelUtilisateurComponent,
+    PageProfileComponent,
+    ChangePassComponent
   ],
   imports: [
     BrowserModule,

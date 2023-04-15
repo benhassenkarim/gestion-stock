@@ -13,6 +13,11 @@ import {NouveauClientFournisseurComponent} from "./composants/nouveau-client-fou
 import {PageCmdCltFrsComponent} from "./pages/page-cmd-clt-frs/page-cmd-clt-frs.component";
 import {NouveauCmdCltFrsComponent} from "./composants/nouveau-cmd-clt-frs/nouveau-cmd-clt-frs.component";
 import {PageCategorieComponent} from "./pages/categorie/page-categorie/page-categorie.component";
+import {NouvelCategorieComponent} from "./pages/categorie/nouvel-categorie/nouvel-categorie.component";
+import {PageUtilisateurComponent} from "./pages/utilisateur/page-utilisateur/page-utilisateur.component";
+import {NouvelUtilisateurComponent} from "./pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component";
+import {PageProfileComponent} from "./pages/profil/page-profile/page-profile.component";
+import {ChangePassComponent} from "./pages/profil/change-pass/change-pass.component";
 
 const routes: Routes = [
   {path:'login',component:PageLoginComponent},
@@ -32,7 +37,11 @@ const routes: Routes = [
       {path:'nouvellecommandesfournisseur',component:NouveauCmdCltFrsComponent},
       {path:'nouveaufournisseur',component:NouveauClientFournisseurComponent},
       {path:'categories',component:PageCategorieComponent},
-      {path:'nouvelleCategorie',component:NouveauClientFournisseurComponent},
+      {path:'nouvelleCategorie',component:NouvelCategorieComponent},
+      {path:'utilisateurs',component:PageUtilisateurComponent},
+      {path:'nouvelutilisateur',component:NouvelUtilisateurComponent},
+      {path:'profil',component:PageProfileComponent},
+      {path:'changermotdepasse',component:ChangePassComponent},
       ]},
 ];
 
