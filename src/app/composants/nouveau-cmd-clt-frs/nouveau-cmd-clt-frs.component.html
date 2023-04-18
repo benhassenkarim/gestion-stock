@@ -1,7 +1,7 @@
 <div class="col mb-3">
   <div class="col-md-12">
     <div class="col-md-12 mb-3 mt-3">
-      <h4>Nouvelle commande <!--{{origin}}--></h4>
+      <h4>Nouvelle commande {{origin}}</h4>
     </div>
    <!-- <div class="alert alert-danger" >&lt;!&ndash;*ngIf="errorMsg.length"&ndash;&gt;
       <div >&lt;!&ndash;*ngFor="let msg of errorMsg"&ndash;&gt;
@@ -91,7 +91,7 @@
     </div>
   </div>
   <div class="col-md-12 text-end mt-2">
-    <button class="btn btn-danger mr-3">
+    <button class="btn btn-danger mr-3" (click)="cancel()">
       <i class="fas fa-ban"></i>&nbsp;
       Annuler
     </button>

@@ -8,7 +8,7 @@
   <hr>
   <div class="col-md-12">
     <div class="col-md-12 mb-3">
-      <h4><i class="fas fa-info-circle blue-color"></i>&nbsp;Information de client/fournisseur</h4>
+      <h4><i class="fas fa-info-circle blue-color"></i>&nbsp;Information du {{origine}}</h4>
     </div>
     <div class="col-md-12">
       <!--<div class="alert alert-danger"> &lt;!&ndash;*ngIf="errorMsg.length > 0"&ndash;&gt;
@@ -65,11 +65,11 @@
     </div>
   </div>
   <div class="col-md-12 text-end">
-    <button class="btn btn-danger mr-3" ><!--(click)="cancel()"-->
+    <button class="btn btn-danger mr-3" (click)="cancel()">
       <i class="fas fa-ban"></i>&nbsp;
       Annuler
     </button>
-    <button class="btn btn-primary" ><!--(click)="enregistrerArticle()"-->
+    <button class="btn btn-primary" (click)="enregistrerArticle()">
       <i class="fas fa-save"></i>&nbsp;
       Enregitrer
     </button>

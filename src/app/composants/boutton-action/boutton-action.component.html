@@ -2,18 +2,18 @@
 <div class="container1 ">
 
 
-      <button type="button" class="btn btn-warning " style="display:inline-block" >
+      <button type="button" class="btn btn-warning " style="display:inline-block" *ngIf="isImporterVisible">
         <span><i class="fas fa-cloud-upload-alt "></i>Importer</span>
       </button>
 
 
 
-      <button type="button" class="btn btn-success">
+      <button type="button" class="btn btn-success" *ngIf="isExporterVisible">
         <i class="fas fa-cloud-download-alt"></i>&nbsp;Exporter
       </button>
 
 
-    <button type="button" class="btn btn-primary" (click)="bouttonNouveauClick()" >
+    <button type="button" class="btn btn-primary" (click)="bouttonNouveauClick()"  *ngIf="isNouveauVisible">
       <i class="fas fa-plus"></i>&nbsp;
       Nouveau
     </button>

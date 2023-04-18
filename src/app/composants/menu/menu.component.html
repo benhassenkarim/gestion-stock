@@ -15,9 +15,9 @@
       <div class="accordion-body">
 
 
-        <ul class="list-group list-group-flush" *ngFor="let sousMenu of menu.sousMenu">
-          <li class="list-group-item">
-            <a href="javascript:void(0);" style="color: inherit;" (click)="navigate(sousMenu.url)">
+        <ul class="list-group list-group-flush" *ngFor="let sousMenu of menu.sousMenu" >
+          <li class="list-group-item " [ngClass]="{'text-white text-bg-primary': sousMenu.active, '': !sousMenu.active}">
+            <a href="javascript:void(0);" style="color: inherit;" (click)="navigate(sousMenu)">
               <i class="{{sousMenu.icon}}">
 
               </i>&nbsp;

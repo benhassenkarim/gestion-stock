@@ -63,12 +63,14 @@
 <div class="col">
   <div class="row m-2">
     <div class="col-md-8 p-0">
-      <h4>Mouvement du stock</h4>
+      <h4>Commande  <!-- &lt; !&ndash; -->{{origin}} <!--&ndash; &gt;s--></h4>
     </div>
     <div class="col-md-4 text-right">
 
       <app-boutton-action
-        (clickEvent)="nouvelArticle()"
+
+        [isImporterVisible]="false"
+        (clickEvent)="nouvelCommande()"
       ></app-boutton-action>
     </div>
     <!-- <div class="alert alert-danger" *ngIf="errorMsg">

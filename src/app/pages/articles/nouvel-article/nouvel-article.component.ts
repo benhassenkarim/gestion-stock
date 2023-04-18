@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-nouvel-article',
   templateUrl: './nouvel-article.component.html',
   styleUrls: ['./nouvel-article.component.css']
 })
-export class NouvelArticleComponent {
+export class NouvelArticleComponent implements OnInit{
+
+  constructor(
+    private router:Router,
+
+  ) {
+  }
+  ngOnInit(): void {
+
+  }
+  cancel() {
+    this.router.navigate(['articles'])
+  }
 
 }
