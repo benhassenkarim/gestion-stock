@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(
     private authenticationService:AuthenticationService,
-
+    private router:Router
   ) { }
 
   login(authenticationRequest:AuthenticationRequest):Observable<AuthenticationResponse>{
@@ -23,5 +23,13 @@ return this.authenticationService.authenticate(authenticationRequest);
   // @ts-ignore
   setConnectedUser(authenticationResponse:AuthenticationResponse):Observable<AuthenticationResponse>{
     localStorage.setItem('connectedUser',JSON.stringify(authenticationResponse));
+  }
+
+  isAccesTockenValid():boolean{
+if(localStorage.getItem('connectedUser')){
+  return true;
+}
+this.router.navigate(['login']);
+return false;
   }
 }

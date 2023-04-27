@@ -3,13 +3,16 @@ import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from 
 
 // @ts-ignore
 import {Observable} from 'rxjs/dist/types';
+import {UserService} from "../user/user.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApplicationGardService implements CanActivate{
 
-  constructor() { }
+  constructor(
+    private userService:UserService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -17,7 +20,7 @@ export class ApplicationGardService implements CanActivate{
   canActivate(route: ActivatedRouteSnapshot,
               state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> |Promise<boolean |UrlTree> |boolean|UrlTree{
-    return false;
+    return this.userService.isAccesTockenValid();
 
   }
 }

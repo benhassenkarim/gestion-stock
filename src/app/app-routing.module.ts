@@ -18,30 +18,31 @@ import {PageUtilisateurComponent} from "./pages/utilisateur/page-utilisateur/pag
 import {NouvelUtilisateurComponent} from "./pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component";
 import {PageProfileComponent} from "./pages/profil/page-profile/page-profile.component";
 import {ChangePassComponent} from "./pages/profil/change-pass/change-pass.component";
+import {ApplicationGardService} from "./service/guard/application-gard.service";
 
 const routes: Routes = [
   {path:'login',component:PageLoginComponent},
   {path:'inscrire',component:PageInscriptionComponent},
-  {path:'',component:PageDashbordComponent,
+  {path:'',component:PageDashbordComponent,canActivate:[ApplicationGardService],
     children:[
-      {path:'statistiques',component:PageStatistiqueComponent},
-      {path:'articles',component:PageArticleComponent},
-      {path:'nouvelarticles',component:NouvelArticleComponent},
-      {path:'mvtstk',component:PageMvtstkComponent},
-      {path:'clients',component:PageClientComponent},
-      {path:'commandesclient',component:PageCmdCltFrsComponent,data:{origin:'client'}},
-      {path:'nouvellecommandesclient',component:NouveauCmdCltFrsComponent,data:{origin:'client'}},
-      {path:'nouveauclient',component:NouveauClientFournisseurComponent,data:{origin:'client'}},
-      {path:'fournisseurs',component:PageFournisseurComponent},
-      {path:'commandesfournisseur',component:PageCmdCltFrsComponent,data:{origin:'fournisseur'}},
-      {path:'nouvellecommandesfournisseur',component:NouveauCmdCltFrsComponent,data:{origin:'fournisseur'}},
-      {path:'nouveaufournisseur',component:NouveauClientFournisseurComponent,data:{origin:'fournisseur'}},
-      {path:'categories',component:PageCategorieComponent},
-      {path:'nouvelleCategorie',component:NouvelCategorieComponent},
-      {path:'utilisateurs',component:PageUtilisateurComponent},
-      {path:'nouvelutilisateur',component:NouvelUtilisateurComponent},
-      {path:'profil',component:PageProfileComponent},
-      {path:'changermotdepasse',component:ChangePassComponent},
+      {path:'statistiques',component:PageStatistiqueComponent,canActivate:[ApplicationGardService]},
+      {path:'articles',component:PageArticleComponent,canActivate:[ApplicationGardService]},
+      {path:'nouvelarticles',component:NouvelArticleComponent,canActivate:[ApplicationGardService]},
+      {path:'mvtstk',component:PageMvtstkComponent,canActivate:[ApplicationGardService]},
+      {path:'clients',component:PageClientComponent,canActivate:[ApplicationGardService]},
+      {path:'commandesclient',component:PageCmdCltFrsComponent,canActivate:[ApplicationGardService],data:{origin:'client'}},
+      {path:'nouvellecommandesclient',component:NouveauCmdCltFrsComponent,canActivate:[ApplicationGardService],data:{origin:'client'}},
+      {path:'nouveauclient',component:NouveauClientFournisseurComponent,canActivate:[ApplicationGardService],data:{origin:'client'}},
+      {path:'fournisseurs',component:PageFournisseurComponent,canActivate:[ApplicationGardService]},
+      {path:'commandesfournisseur',component:PageCmdCltFrsComponent,canActivate:[ApplicationGardService],data:{origin:'fournisseur'}},
+      {path:'nouvellecommandesfournisseur',component:NouveauCmdCltFrsComponent,canActivate:[ApplicationGardService],data:{origin:'fournisseur'}},
+      {path:'nouveaufournisseur',component:NouveauClientFournisseurComponent,canActivate:[ApplicationGardService],data:{origin:'fournisseur'}},
+      {path:'categories',component:PageCategorieComponent,canActivate:[ApplicationGardService]},
+      {path:'nouvelleCategorie',component:NouvelCategorieComponent,canActivate:[ApplicationGardService]},
+      {path:'utilisateurs',component:PageUtilisateurComponent,canActivate:[ApplicationGardService]},
+      {path:'nouvelutilisateur',component:NouvelUtilisateurComponent,canActivate:[ApplicationGardService]},
+      {path:'profil',component:PageProfileComponent,canActivate:[ApplicationGardService]},
+      {path:'changermotdepasse',component:ChangePassComponent,canActivate:[ApplicationGardService]},
       ]},
 ];
 
