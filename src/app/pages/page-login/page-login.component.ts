@@ -24,17 +24,21 @@ export class PageLoginComponent implements OnInit {
 
   login() {
     this.userService.login(this.authenticationRequest).subscribe((data) => {
-      this.userService.setConnectedUser(data);
+      this.userService.setAccessToken(data);
+      this.getUserByEmail();
       this.router.navigate(['']);
-      console.log(this.authenticationRequest);
-      console.log('gdetd');
-      console.log(data);
-    }, error => {
-      console.log(error);
-      this.errorMessage=error.error.message;
-      console.log(this.authenticationRequest);
-      debugger;
 
+    }, error => {
+
+      this.errorMessage=error.error.message;
+
+      /*debugger;*/
+
+    });
+  }
+  getUserByEmail():void{
+    this.userService.getUserByEmail(this.authenticationRequest.login).subscribe(user=>{
+      this.userService.setUtilisateur(user)
     });
   }
 }
