@@ -32,8 +32,9 @@ import { DetailUtilisateurComponent } from './composants/detail-utilisateur/deta
 import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component';
 import { PageProfileComponent } from './pages/profil/page-profile/page-profile.component';
 import { ChangePassComponent } from './pages/profil/change-pass/change-pass.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {InterceptorService} from "./service/interceptor/interceptor.service";
 
 @NgModule({
   declarations: [
@@ -75,7 +76,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:InterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

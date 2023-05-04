@@ -33,7 +33,7 @@ export class PageLoginComponent implements OnInit {
       console.log(error);
       this.errorMessage=error.error.message;
       console.log(this.authenticationRequest);
-    /*  debugger;*/
+      debugger;
 
     });
   }
