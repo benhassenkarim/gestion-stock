@@ -39,6 +39,7 @@ const routes: Routes = [
       {path:'nouveaufournisseur',component:NouveauClientFournisseurComponent,canActivate:[ApplicationGardService],data:{origin:'fournisseur'}},
       {path:'categories',component:PageCategorieComponent,canActivate:[ApplicationGardService]},
       {path:'nouvelleCategorie',component:NouvelCategorieComponent,canActivate:[ApplicationGardService]},
+      {path:'nouvelleCategorie/:idCategory',component:NouvelCategorieComponent,canActivate:[ApplicationGardService]},
       {path:'utilisateurs',component:PageUtilisateurComponent,canActivate:[ApplicationGardService]},
       {path:'nouvelutilisateur',component:NouvelUtilisateurComponent,canActivate:[ApplicationGardService]},
       {path:'profil',component:PageProfileComponent,canActivate:[ApplicationGardService]},

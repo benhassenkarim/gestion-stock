@@ -5,31 +5,31 @@
     </div>
     <div class="col-md-4 text-right">
       <app-boutton-action
-        (clickEvent)="nouvelCategirie()"
+        (clickEvent)="nouvelleCategory()"
       ></app-boutton-action>
     </div>
   </div>
   <div class="col m-3">
-    <!--<div class="row col-md-12 alert alert-danger" >&lt;!&ndash;*ngIf="errorMsgs"&ndash;&gt;
+    <div class="row col-md-12 alert alert-danger"*ngIf="errorMsgs" >
       {{ errorMsgs }}
-    </div>-->
-    <div class="row col-md-12 custom-border mb-3 p-3" ><!--*ngFor="let cat of listCategories"-->
+    </div>
+    <div class="row col-md-12 custom-border mb-3 p-3" *ngFor="let cat of listCategories" >
       <div class="col-md-3 custom-border-right">
-        <!--{{cat.code}}-->
+        {{cat.code}}
       </div>
       <div class="col-md-4 custom-border-right">
-       <!-- {{cat.designation}}-->
+        {{cat.designation}}
       </div>
       <div class="col-md-3">
         <div class="row">
           <div class="col-md-4">
-            <button type="button" class="btn btn-link" ><!--(click)="modifierCategory(cat.id)"-->
+            <button type="button" class="btn btn-link"(click)="modifierCategory(cat.id)">
               <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
             </button>
           </div>
           <div class="col-md-4">
-            <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#modalDeleteCat"
-                    ><!--(click)="selectCatPourSupprimer(cat.id)"-->
+            <button type="button" class="btn btn-link text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="selectCatPourSupprimer(cat.id)"  >
               <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
             </button>
           </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
   </div>
-  <div class="row mb-3" ><!--*ngIf="listCategories.length > 0"-->
+  <div class="row mb-3" *ngIf="listCategories.length > 0" >
     <div class=" col-md-12 text-center">
       <app-pagination></app-pagination>
     </div>
@@ -64,10 +64,28 @@
         Etes vous-sur de vouloir supprimer cette categorie?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" ><!--(click)="annulerSuppressionCat()"-->
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="annulerSuppressionCat()">
           <i class="fas fa-ban"></i>&nbsp;Annuler</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal" ><!--(click)="confirmerEtSupprimerCat()"-->
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="confirmerEtSupprimerCat()" >
           <i class="fas fa-trash-alt"></i>&nbsp;Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Etes vous-sur de vouloir supprimer cette categorie?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="annulerSuppressionCat()" >Annuler</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="confirmerEtSupprimerCat()" >Supprimer</button>
       </div>
     </div>
   </div>
