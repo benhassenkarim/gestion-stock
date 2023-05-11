@@ -11,40 +11,40 @@
       <h4><i class="fas fa-info-circle blue-color"></i>&nbsp;Information de l'article</h4>
     </div>
     <div class="col-md-12">
-      <!--<div class="alert alert-danger"> &lt;!&ndash;*ngIf="errorMsg.length > 0"&ndash;&gt;
-        <div >&lt;!&ndash;*ngFor="let msg of errorMsg"&ndash;&gt;
-          <span >&lt;!&ndash;{{msg}}&ndash;&gt;</span>
+      <div class="alert alert-danger" *ngIf="errorMsg.length > 0">
+        <div *ngFor="let msg of errorMsg">
+          <span >{{msg}}</span>
         </div>
-      </div>-->
+      </div>
       <form>
         <div class="row mb-3">
           <div class="col">
-            <input type="text" class="form-control" name="codearticle" placeholder="Code article" ><!--[(ngModel)]="articleDto.codeArticle"-->
+            <input type="text" class="form-control" name="codearticle" placeholder="Code article" [(ngModel)]="articleDto.codeArticle">
           </div>
           <div class="col">
-            <input type="text" class="form-control" name="designation" placeholder="Designation" ><!-- [(ngModel)]="articleDto.designation"-->
+            <input type="text" class="form-control" name="designation" placeholder="Designation"  [(ngModel)]="articleDto.designation">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col">
             <input type="text" class="form-control" name="prixunitht" placeholder="Prix unitaire HT"
-                   ><!--(input)="calculerTTC()"
-                   [(ngModel)]="articleDto.prixUnitaireHt"-->
+                   (input)="calculerTTC()"
+                   [(ngModel)]="articleDto.prixUnitaireHt">
           </div>
           <div class="col">
             <input type="text" class="form-control" name="tauxtva" placeholder="Taux TVA"
-                   ><!--(input)="calculerTTC()"
-                   [(ngModel)]="articleDto.tauxTva"-->
+                   (input)="calculerTTC()"
+                   [(ngModel)]="articleDto.tauxTva">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col">
-            <input type="text" class="form-control" name="prixunitttc" placeholder="Prix unitaire TTC"  ><!--[(ngModel)]="articleDto.prixUnitaireTtc"-->
+            <input type="text" class="form-control" name="prixunitttc" placeholder="Prix unitaire TTC"  [(ngModel)]="articleDto.prixUnitaireTtc">
           </div>
           <div class="col">
-            <select class="form-control" name="cat" ><!--[(ngModel)]="categorieDto.id"-->
+            <select class="form-control" name="cat" [(ngModel)]="categorieDto.id">
               <option [value]="null">Selectionner une categorie</option>
-              <option ><!--*ngFor="let cat of listeCategorie" [value]="cat.id">{{ cat.code }} - {{ cat.designation }}--></option>
+              <option *ngFor="let cat of listeCategorie" [value]="cat.id">{{ cat.code }} - {{ cat.designation }}</option>
             </select>
           </div>
         </div>
@@ -56,7 +56,7 @@
       <i class="fas fa-ban"></i>&nbsp;
       Annuler
     </button>
-    <button class="btn btn-primary" ><!--(click)="enregistrerArticle()"-->
+    <button class="btn btn-primary" (click)="enregistrerArticle()">
       <i class="fas fa-save"></i>&nbsp;
       Enregitrer
     </button>
