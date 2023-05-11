@@ -21,6 +21,7 @@ export class DetailArticleComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
+    console.log('test',this.articleDto.id)
   }
 
   modifierArticle(): void {

@@ -28,6 +28,7 @@ const routes: Routes = [
       {path:'statistiques',component:PageStatistiqueComponent,canActivate:[ApplicationGardService]},
       {path:'articles',component:PageArticleComponent,canActivate:[ApplicationGardService]},
       {path:'nouvelarticles',component:NouvelArticleComponent,canActivate:[ApplicationGardService]},
+      {path:'nouvelarticles/:idArticle',component:NouvelArticleComponent,canActivate:[ApplicationGardService]},
       {path:'mvtstk',component:PageMvtstkComponent,canActivate:[ApplicationGardService]},
       {path:'clients',component:PageClientComponent,canActivate:[ApplicationGardService]},
       {path:'commandesclient',component:PageCmdCltFrsComponent,canActivate:[ApplicationGardService],data:{origin:'client'}},

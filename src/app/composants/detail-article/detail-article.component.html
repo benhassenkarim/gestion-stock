@@ -51,7 +51,7 @@
         </button>
       </div>
       <div class="col-md-4">
-        <button type="button" class="btn btn-link text-danger" data-toggle="modal" [attr.data-target]="'#modalDeleteArticle' "> <!--+ articleDto.id-->
+        <button type="button" class="btn btn-link text-danger" data-bs-toggle="modal" data-bs-target="#modalDeleteArticle">
           <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
         </button>
       </div>
@@ -62,28 +62,23 @@
       </div>
     </div>
   </div>
-  <!-- Modal --> <!--{{ articleDto.id }}-->
-  <div class="modal fade" id="modalDeleteArticle" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-       aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Etes vous-sur de vouloir supprimer cet article?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            <i class="fas fa-ban"></i>&nbsp;Annuler</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="confirmerEtSupprimerArticle()">
-            <i class="fas fa-trash-alt"></i>&nbsp;Supprimer</button>
-        </div>
+  <!-- Modal -->
+
+
+<div class="modal fade" id="modalDeleteArticle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Etes vous-sur de vouloir supprimer cet article?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  >Annuler</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="confirmerEtSupprimerArticle()" >Supprimer</button>
       </div>
     </div>
   </div>
 </div>
-

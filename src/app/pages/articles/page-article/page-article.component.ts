@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {ArticleDto} from "../../../../gs-api/src/models/article-dto";
+import {ArticleService} from "../../../service/article/article.service";
 
 @Component({
   selector: 'app-page-article',
@@ -8,34 +10,34 @@ import {Router} from "@angular/router";
 })
 export class PageArticleComponent implements OnInit {
 
-  /*listArticle: Array<ArticleDto> = [];*/
+  listArticle: Array<ArticleDto> = [];
   errorMsg = '';
 
   constructor(
     private router: Router,
-    /*private articleService: ArticleService*/
+    private articleService: ArticleService
   ) { }
 
   ngOnInit(): void {
-    /*this.findListArticle();*/
+    this.findListArticle();
   }
 
-  /*findListArticle(): void {
+  findListArticle(): void {
     this.articleService.findAllArticles()
       .subscribe(articles => {
         this.listArticle = articles;
       });
-  }*/
+  }
 
   nouvelArticle(): void {
     this.router.navigate(['nouvelarticles']);
   }
 
- /* handleSuppression(event: any): void {
+  handleSuppression(event: any): void {
     if (event === 'success') {
       this.findListArticle();
     } else {
       this.errorMsg = event;
     }
-  }*/
+  }
 }
