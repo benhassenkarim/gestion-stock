@@ -9,19 +9,19 @@
     <div class="col">
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.codeArticle }}--> codeArticcle</div>
+        <div class="col-md-11">{{ articleDto.codeArticle }} </div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.designation }}--> designation</div>
+        <div class="col-md-11">{{ articleDto.designation }} </div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-dollar-sign blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.prixUnitaireHt }}-->prixHT €</div>
+        <div class="col-md-11">{{ articleDto.prixUnitaireHt }} €</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-dollar-sign blue-color"></i></div>
-        <div class="col-md-11"><!--{{ articleDto.prixUnitaireTtc }}--> prixTTC€</div>
+        <div class="col-md-11">{{ articleDto.prixUnitaireTtc }} €</div>
       </div>
     </div>
   </div>
@@ -35,8 +35,8 @@
       </div>
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-12"><!--{{ articleDto.category?.code }}--> code</div>
-          <div class="col-md-12"><!--{{ articleDto.category?.designation }}--> designation</div>
+          <div class="col-md-12">{{ articleDto.category?.code }}</div>
+          <div class="col-md-12">{{ articleDto.category?.designation }}</div>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
   <div class="col-md-3 mb-1 mt-1 ">
     <div class="row">
       <div class="col-md-4">
-        <button type="button" class="btn btn-link" > <!--(click)="modifierArticle()"-->
+        <button type="button" class="btn btn-link" (click)="modifierArticle()">
           <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
         </button>
       </div>
@@ -79,7 +79,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             <i class="fas fa-ban"></i>&nbsp;Annuler</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal" ><!--(click)="confirmerEtSupprimerArticle()"-->
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="confirmerEtSupprimerArticle()">
             <i class="fas fa-trash-alt"></i>&nbsp;Supprimer</button>
         </div>
       </div>
