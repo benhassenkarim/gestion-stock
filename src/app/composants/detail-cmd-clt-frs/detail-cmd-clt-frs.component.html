@@ -8,15 +8,15 @@
     <div class="col">
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-10"><!--{{ cltFrs?.nom }}-->nom</div>
+        <div class="col-md-10">{{ cltFrs?.nom }}</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-info-circle blue-color"></i></div>
-        <div class="col-md-10"><!--{{ cltFrs?.prenom }}-->premon</div>
+        <div class="col-md-10">{{ cltFrs?.prenom }}</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-phone-alt blue-color"></i></div>
-        <div class="col-md-10"><!--{{ cltFrs?.numTel }}-->tel</div>
+        <div class="col-md-10">{{ cltFrs?.numTel }}</div>
       </div>
     </div>
   </div>
@@ -26,15 +26,15 @@
     <div class="col">
       <div class="row">
         <div class="col-md-1"><i class="fas fa-qrcode blue-color"></i></div>
-        <div class="col-md-10"><!--{{ commande.code }}-->code commande</div>
+        <div class="col-md-10">{{ commande.code }}</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-calendar-check blue-color"></i></div>
-        <div class="col-md-10"><!--{{ commande.dateCommande }}--> date commane</div>
+        <div class="col-md-10">{{ commande.dateCommande }}</div>
       </div>
       <div class="row">
         <div class="col-md-1"><i class="fas fa-cart-arrow-down blue-color"></i></div>
-        <div class="col-md-10"><!--{{ commande.etatCommande }}--> etat</div>
+        <div class="col-md-10">{{ commande.etatCommande }}</div>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
   <div class="col-md-3 mb-1 mt-1 ">
     <div class="row">
       <div class="col-md-6 text-center">
-        <button type="button" class="btn btn-link" > <!--(click)="modifierClick()"-->
+        <button type="button" class="btn btn-link" (click)="modifierClick()">
           <i class="fas fa-pencil-alt blue-color"></i>&nbsp;
           Modifier
         </button>
