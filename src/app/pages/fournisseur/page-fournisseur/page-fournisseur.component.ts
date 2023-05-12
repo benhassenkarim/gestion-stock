@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {FournisseurDto} from "../../../../gs-api/src/models/fournisseur-dto";
+import {CltfrsService} from "../../../service/ctlfrs/cltfrs.service";
 
 @Component({
   selector: 'app-page-fournisseur',
@@ -7,14 +9,35 @@ import {Router} from "@angular/router";
   styleUrls: ['./page-fournisseur.component.css']
 })
 export class PageFournisseurComponent implements OnInit{
-  ngOnInit(): void {
-  }
+  listFournisseur: Array<FournisseurDto> = [];
+  errorMsg = '';
+
   constructor(
-    private router:Router
-  ) {
+    private router: Router,
+    private cltFrsService: CltfrsService
+  ) { }
+
+  ngOnInit(): void {
+    this.findAllFournisseurs();
   }
-  nouvelFournisseur():void {
-this.router.navigate(['nouveaufournisseur'])
+
+  findAllFournisseurs(): void {
+    this.cltFrsService.findAllFournisseurs()
+      .subscribe(fournisseurs => {
+        this.listFournisseur = fournisseurs;
+      });
+  }
+
+  nouveauFournisseur(): void {
+    this.router.navigate(['nouveaufournisseur']);
+  }
+
+  handleSuppression(event: any): void {
+    if (event === 'success') {
+      this.findAllFournisseurs();
+    } else {
+      this.errorMsg = event;
+    }
   }
 
 

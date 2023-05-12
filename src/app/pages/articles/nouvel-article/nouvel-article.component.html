@@ -1,8 +1,8 @@
 <div class="col mb-3">
   <div class="col-md-12 mb-3 mt-3">
-    <button  style="background-color: transparent; border: none;"><!--(click)="fileInput.click()"-->
-      <img  src="assets/product.png" class="rounded-circle" width="100px" height="100px" /><!--[src]="imgUrl" -->
-      <input hidden type="file" ><!--#fileInput (change)="onFileInput(fileInput.files)"-->
+    <button  style="background-color: transparent; border: none;" (click)="fileInput.click()">
+      <img  src="assets/product.png" class="rounded-circle" width="100px" height="100px"[src]="imgUrl"  />
+      <input hidden type="file" #fileInput (change)="onFileInput(fileInput.files)">
     </button>
   </div>
   <hr>
